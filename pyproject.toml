@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log_test"
+authors = [{ name = "j202", email = "j202@users.noreply.github.com" }]
+dependencies = []
+description = "A logger test app"
+readme = "README.md"
+requires-python = ">=3.13"
+keywords = ["log_test"]
+license = { text = "MIT License" }
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pre-commit >=4.0.1", "black", "pylint", "mypy", "isort"]
+
+[tool.black]
+line-length = 99
+
+[tool.isort]
+profile = "black"

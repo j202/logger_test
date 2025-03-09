@@ -1,0 +1,29 @@
+language: en-GB
+ignorePaths:
+  - package-lock.json
+  - node_modules
+  - vscode-extension
+  - .git/{info,lfs,logs,refs,objects}/**
+  - .git/{index,*refs,*HEAD}
+  - .vscode
+  - .vscode-insiders
+  - .devcontainer/devcontainer.json
+  - cspell.config.yaml
+ignoreWords:
+  - isort
+  - gnupg
+overrides:
+  - filename: 'pyproject.toml'
+    dictionaries:
+      - python
+  - filename: 'Dockerfile'
+    dictionaries:
+      - bash
+    ignoreWords:
+      - NOPASSWD
+  - filename: '.pre-commit-config.yaml'
+    dictionaries:
+      - python
+  - filename: 'main.py'
+    ignoreWords:
+      - levelname
